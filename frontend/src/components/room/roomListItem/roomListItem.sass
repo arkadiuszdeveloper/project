@@ -1,0 +1,76 @@
+.room-item
+    width: 100%
+    display: flex
+    padding: 2.5px 5px
+    box-sizing: border-box
+
+    &-container
+        gap: 15px
+        width: 100%
+        display: flex
+        padding: 10px
+        position: relative
+        box-sizing: border-box
+        border-radius: 5px
+        cursor: pointer
+
+        &:hover
+            background-color: var(--input-autofil)
+            transition: .2s all
+
+    &-settings
+        top: 0
+        height: 100%
+        right: 10px
+        padding: 10px 0
+        position: absolute
+        box-sizing: border-box
+        transition: .15s all
+        opacity: 0
+
+    &:hover &-settings
+        opacity: 1
+
+    &-avatar
+        width: 42px
+        height: 42px
+        min-width: 42px
+        min-height: 42px
+
+    &-details
+        width: calc(100% - 42px)
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+
+        &-header,
+        &-footer
+            gap: 5px
+            width: 100%
+            display: flex
+            box-sizing: border-box
+
+        &-name
+            gap: 5px
+            display: flex
+            max-width: 80%
+            font-size: 13px
+            font-weight: 500
+            text-wrap: nowrap
+            text-overflow: ellipsis
+            overflow: hidden
+
+        &-history,
+        &-history-time
+            max-width: 65%
+            font-size: 12px
+            font-weight: 400
+            text-wrap: nowrap
+            text-overflow: ellipsis
+            overflow: hidden
+    
+    &.active &-container
+        background-color: rgb(0, 0, 0, .03)
+    
+    &.notWiewed &-container
+        background-color: var(--room-notseen)

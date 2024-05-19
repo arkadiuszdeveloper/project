@@ -1,0 +1,42 @@
+version: '1.0'
+services:
+  db:
+    image: postgres:alpine3.18
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+
+  frontend:
+    image: app-frontend:1.0.0
+    environment:
+      API_URL: ${API_URL}
+
+  backend:
+    depends_on:
+      - db
+    image: app-backend:1.0.0
+    environment:
+      PORT: ${PORT}
+      MAX_FILE_SIZE: ${MAX_FILE_SIZE}
+      JWT_SECRET: ${JWT_SECRET}
+      JWT_SECRET_EXPIRESIN: ${JWT_SECRET_EXPIRESIN}
+      POSTGRES_HOST: ${POSTGRES_HOST}
+      POSTGRES_PORT: ${POSTGRES_PORT}
+      POSTGRES_USERNAME: ${POSTGRES_USERNAME}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DATABASE: ${POSTGRES_DATABASE}
+      MAIL_SMTP: ${MAIL_SMTP}
+      MAIL_LOGI: ${MAIL_LOGI}
+      MAIL_PASS: ${MAIL_PASS}
+
+  proxy:
+    depends_on:
+      - frontend
+      - backend
+    image: nginx:1.25.2
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+      - ./conf.d:/etc/nginx/conf.d:ro

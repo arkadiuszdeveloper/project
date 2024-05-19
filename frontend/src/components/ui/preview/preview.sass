@@ -1,0 +1,24 @@
+.preview
+    gap: 5px
+    display: flex
+    flex-direction: column
+
+    &-description
+        overflow: hidden
+        display: -webkit-box
+        -webkit-line-clamp: 7
+        -webkit-box-orient: vertical
+
+    &-title a
+        font-weight: 500
+
+    &-image 
+        max-height: 200px
+        overflow: hidden
+        display: flex
+        align-items: center
+        border-radius: 0 0 4px 4px
+
+        & > a > img
+            max-width: 100%
+            border-radius: 5px

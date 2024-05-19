@@ -1,0 +1,148 @@
+.message
+    width: 100%
+    display: flex
+    padding: 5px
+    box-sizing: border-box
+    overflow-x: hidden
+
+    transform: translateY(0)
+    opacity: 1
+    transition: .2s all
+    &.hide
+        transform: translateY(-30px)
+        opacity: 0
+
+    &-reply
+        margin-bottom: -5px
+        max-height: 50px
+        position: relative
+        overflow: hidden
+        z-index: -1
+        opacity: 0.3
+
+    &-replyHighlight
+        border-radius: 5px
+        background-color: var(--input-autofil)
+
+    &-avatar
+        width: 30px
+        min-width: 30px
+        height: 30px
+        min-height: 30px
+
+    &-container
+        gap: 5px
+        display: flex
+        align-items: flex-end
+        max-width: 600px
+
+    &-content
+        display: flex
+        align-items: start
+        flex-direction: column
+        &-name
+            color: rgb(0, 0, 0, .8)
+            font-size: 12px
+
+        &-text
+            color: rgb(0, 0, 0, .8)
+            font-size: 13px
+            box-sizing: border-box
+            border-radius: 6px
+            background-color: rgba(0, 0, 0, 0)
+        
+        &-time
+            font-size: 9px
+            text-align: right
+
+        &-container
+            display: flex
+            flex-direction: column
+
+        &-main
+            gap: 10px
+            color: rgb(0, 0, 0, .8)
+            display: flex
+            flex-direction: column
+            min-height: 31.5px
+            font-size: 13px
+            padding: 6px 8px
+            box-sizing: border-box
+            border-radius: 6px
+            background-color: rgb(0, 0, 0, .03)
+
+            text-wrap: wrap
+            word-break: break-all
+
+            .preview
+                box-sizing: border-box
+                background-color: rgb(0, 0, 0, .05)
+                border-radius: 5px
+
+                &-title,
+                &-description
+                    padding: 5px
+
+                &-description
+                    text-indent: 20px
+
+    &-hideName
+        .message-content-name
+            display: none
+    
+    &-hideAvatar
+        .message-avatar
+            opacity: 0
+        
+
+    &-options
+        gap: 5px
+        display: flex
+        padding: 0 5px
+        box-sizing: border-box
+        align-items: center
+        opacity: 0
+
+        &-item
+            color: rgb(158, 158, 158)
+            cursor: pointer
+            &:hover
+                color: var(--primary-color)
+
+    &:hover &-options
+        opacity: 1
+
+    &-owner
+        a, a:visited
+            color: white
+        &.message
+            &-layout-default
+                align-items: right
+                justify-content: right
+
+                & > .message-container
+                    align-items: end
+                    & > .message-avatar
+                        display: none
+                    & > .message-content
+                        .message-content-time
+                            text-align: left
+
+                        & > .message-contentFlex
+                            & > .options
+                                order: 1
+                            & > .message-content-main-container
+                                order: 2
+
+        .message-container > .message-content > .message-contentFlex > .message-content-main-container
+            & > .message-content-main
+                color: white
+                border-radius: 6px
+                background-color: rgb(216, 0, 255)
+
+                & > .message-content-text
+                    color: white
+
+@media only screen and (max-width: 1000px)
+    .message-container
+        max-width: 80%

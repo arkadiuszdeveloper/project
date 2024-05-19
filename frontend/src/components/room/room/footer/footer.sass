@@ -1,0 +1,60 @@
+.room-footer
+    width: 100%
+    height: auto
+    display: flex
+    position: relative
+    box-sizing: border-box
+    align-items: center
+    justify-content: center
+
+    &-container
+        width: 100%
+        height: auto
+        position: relative
+        background-color: rgba(255, 255, 255, 0.05)
+
+    &-form
+        gap: 10px
+        width: 100%
+        display: flex
+        padding: 5px 10px 5px 10px
+        box-sizing: border-box
+        align-items: center
+
+        textarea
+            margin: 0
+            padding: 0
+
+        &-message
+            width: 100%
+            height: 22px
+            min-height: 22px
+            max-height: 200px
+            overflow-y: auto
+            resize: none
+            border: none
+            outline: none
+            padding: 10px
+            font-size: 14px
+            box-sizing: border-box
+            font-family: inherit
+            border-radius: 4px
+            word-break: break-all
+            background-color: rgba(255, 255, 255, 0)
+
+        &-submit
+            color: white
+            width: 40px
+            height: 40px
+            display: flex
+            padding: 8px 11px 8px 8px
+            box-sizing: border-box
+            align-items: center
+            border-radius: 100%
+            justify-content: center
+            background-color: var(--primary-color)
+            cursor: pointer
+
+            & > svg
+                width: 100%
+                height: 100%

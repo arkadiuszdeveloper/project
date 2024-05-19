@@ -1,0 +1,59 @@
+.auth
+
+  &-container
+    height: 100vh
+    display: flex
+    align-items: center
+    justify-content: center
+
+  &-component
+    width: 250px
+    display: flex
+    padding: 25px
+    border-radius: 4px
+    flex-direction: column
+    background: rgba(255, 255, 255, 0.8)
+    backdrop-filter: saturate(180%) blur(20px)
+    box-shadow: 0 0 0 2px whitesmoke
+
+    &-header
+      &-title
+        display: block
+        margin-bottom: 15px
+        font-weight: 700
+
+  &-recoveryPassword
+    font-weight: 400
+    &:hover
+      cursor: pointer
+      text-decoration: underline
+
+  &-form
+    gap: 12px
+    display: flex
+    font-size: 14px
+    font-weight: 500
+    flex-direction: column
+
+    &-flex
+      display: flex
+      justify-content: space-between
+
+    &-switchMode
+      width: 100%
+      margin-top: 10px
+      display: block
+      text-align: center
+      font-size: 14px
+      cursor: pointer
+
+      &:hover
+        background-color: rgb(249, 249, 249)
+
+    &-field
+      display: flex
+      flex-direction: column
+
+      & > label
+        color: rgb(0, 0, 0)
+        margin-bottom: 5px

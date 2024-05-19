@@ -1,0 +1,27 @@
+.xicon
+    width: 40px
+    height: 40px
+    display: flex
+    position: relative
+    align-items: center
+    border-radius: 4px
+    justify-content: center
+    cursor: pointer
+
+    & > span
+        width: 50%
+        height: 2px
+        display: block
+        position: absolute
+        background-color: var(--primary-color)
+
+        &:first-child
+            transform: rotate(45deg)
+        
+        &:last-child
+            transform: rotate(-45deg)
+
+    &:hover
+        background-color: var(--input-autofil)
+        & > span
+            background-color: var(--primary-color)

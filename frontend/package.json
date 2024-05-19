@@ -1,0 +1,51 @@
+{
+  "name": "frontend",
+  "version": "1.0.0",
+  "private": true,
+  "description": "frontend",
+  "author": "devarkadiusz",
+  "keywords": [
+    "gatsby"
+  ],
+  "scripts": {
+    "develop": "gatsby develop",
+    "start": "gatsby develop --host=0.0.0.0",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@mdx-js/react": "^2.0.0",
+    "@react-icons/all-files": "^4.1.0",
+    "gatsby": "^5.12.12",
+    "gatsby-plugin-image": "^3.12.3",
+    "gatsby-plugin-manifest": "^5.12.3",
+    "gatsby-plugin-mdx": "^5.12.3",
+    "gatsby-plugin-sass": "^6.12.3",
+    "gatsby-plugin-sharp": "^5.12.3",
+    "gatsby-plugin-sitemap": "^6.12.3",
+    "gatsby-source-filesystem": "^5.12.1",
+    "gatsby-transformer-remark": "^6.12.3",
+    "gatsby-transformer-sharp": "^5.12.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-hook-form": "^7.49.2",
+    "react-icons": "^4.12.0",
+    "react-markdown": "^8.0.7",
+    "recoil": "^0.7.7",
+    "recoil-persist": "^5.1.0",
+    "sass": "^1.69.5",
+    "socket.io-client": "^4.7.2",
+    "tippy.js": "^6.3.7"
+  },
+  "devDependencies": {
+    "@types/node": "^20.3.3",
+    "@types/react": "^18.2.14",
+    "@types/react-dom": "^18.2.6",
+    "eslint": "^7.32.0",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "typescript": "^5.1.6"
+  }
+}

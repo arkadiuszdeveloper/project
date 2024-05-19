@@ -1,0 +1,42 @@
+.input
+    border: none
+    outline: none
+    padding: 5px 12px
+    box-sizing: border-box
+    border-radius: 4px
+
+    &-auth
+        &[type='submit'],
+        &[type='button']
+            color: var(--btn-font-color)
+            background-color: var(--btn-font-bgcolor)
+
+        &[type='text'],
+        &[type='email'],
+        &[type='password']
+            background-color: rgb(250, 250, 250)
+        
+        &[type='submit'],
+        &[type='button']
+            cursor: pointer
+        
+        &[type='submit'],
+        &[type='button'],
+        &[type='text'],
+        &[type='email'],
+        &[type='password']
+            border: 1px solid var(--input-border-color)
+
+            &:autofill,
+            &:-webkit-autofill,
+            &:-webkit-autofill:hover
+                border: 1px solid var(--input-autofil)
+                -webkit-text-fill-color: black
+                -webkit-box-shadow: 0 0 0px 1000px var(--input-autofil) inset
+                transition: background-color 5000s ease-in-out 0s
+                background-color: var(--input-border-color-focus-light)
+
+            &:focus,
+            &:-webkit-autofill:focus
+                border: 1px solid var(--input-border-color-focus)
+                box-shadow: 0 0 0 2px var(--input-border-color-focus-light)
